@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+  <input id="in_text">
+  <p id="question"></p>
+  <br/>
+  <p id="out_text"></p>
+  <script> 
+    var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    var question = document.getElementById("question")
+    var in_text = document.getElementById("in_text")
+    var first;
+    var q;
+    var add;
+    var random = Math.round(Math.random() * 25);
+    var intervalID = setInterval(newq, 2500);
+    function newq(e){
+      var random = Math.round(Math.random() * 25);
+      add=str[random];
+      q=add+question.innerHTML;
+      question.innerHTML = q;
+      first=q.slice(-1);
+    }
+    document.addEventListener('keydown', logKey);
+    function logKey(string) {
+      if(string.key==first) {
+          out_text.innerHTML += `${string.key}`;
+        }
+      else {
+          newq;
+        }
+    }
+    
+//     window.onkeyup = function (e) {
+//     res = text.innerHTML
+//     text.innerHTML = newRes
+//     if(e.keyCode == res.charCodeAt(0)){
+//        count++;
+//        ipt.value = '';
+//       }else{
+//        alert('game over' + '   ' +'您的得分是'+ ':' + count)
+//        count = 0;
+//        ipt.value = '';
+//       }
+
+//      }
+    
+//     document.addEventListener('keydown', logKey);
+//     function logKey(string) {
+//       if(string.key!=" ") {
+//           out_text.innerHTML += ` ${string.key}`;
+//         }
+//       else {
+//           out_text.innerHTML += " Space ";
+//         }
+//     }
+  </script> 
+</body> 
+</html> 
