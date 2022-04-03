@@ -2,13 +2,16 @@
 <html> 
 <body> 
   <input>
-  <p id="log"></p>
+  <p id="out_text"></p>
   <script> 
-    const input = document.querySelector('input');
-    const log = document.getElementById('log');
-    input.addEventListener('keydown', logKey);
-    function logKey(e) {
-       log.textContent += ` ${e.key}`;
+    document.addEventListener('keydown', logKey);
+    function logKey(string) {
+      if(string.key!=" ") {
+          out_text.innerHTML += ` ${string.key}`;
+        }
+      else {
+          out_text.innerHTML += " Space ";
+        }
     }
   </script> 
 </body> 
