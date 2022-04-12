@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html> 
+<body> 
+    <!-- <button class="btn1">Animate</button>
+    <button class="btn2">Reset</button>
+    <button class="btn3">move</button> -->
+    <div id="a"></div>
+    <div id="b">
+        
+        <img id="picture1" src="img/A.png"style="position:absolute" width="50" height="50"/>
+
+        <!-- <img id='picture2' src="b.png" style="position:absolute" width="50" height="50"/> -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
+    <script> 
+        var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        $(document).ready(function()
+        {
+            $('#picture1').hide();
+            var x=2;
+            for(let i=0;i<100;i++) 
+            {
+                
+                setTimeout(createimg,660*i);   
+            }
+            function createimg()
+            {
+                var random = Math.round(Math.random() * 25);
+                add=str[random];
+                $('#picture1').before("<img src='img/"+add+".png' id='picture'" +' style="position:absolute" width="50" height="50"/>');//add new element
+                $('#picture').attr('id',"picture"+x);//change new element id
+                $("#picture"+x).animate({left:"1400px"},5000);//move new element
+                x++;
+            }
+
+            document.addEventListener('keydown', logKey);
+            function logKey(string) 
+            {
+                if(("#picture"+2).Pos.style.left>500)
+                    {
+                        $('#picture1').hide();
+                    }
+                // if(string.key==) 
+                //     remove();
+            }
+        });
+    </script> 
+</body> 
+</html>
