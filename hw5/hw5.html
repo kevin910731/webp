@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  charset="UTF-8"></meta>
+<style>
+   .st{
+    border-width: 3px;
+    border-style:inset;
+    width: 150px;
+    height: 30px;
+    border-color: rgb(252, 252, 252);
+    padding: 5px;
+    background-color: rgb(41, 122, 176);
+   } 
+    .st:hover{
+    background-color: rgb(214, 201, 19);
+    font-size: 20px;
+   }
+   .arrow {
+    border: solid black;
+    border-width: 0px 4px 4px 0;
+    display: inline-block;
+    padding: 8px;
+   }
+   .down {
+    transform: rotate(45deg);
+   }
+</style>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="sha1.js"></script>
+<script type="text/javascript" src="hw5.js"></script>
+</head>
+<body style="background-color: rgb(222, 135, 193);">
+    <h1 style="text-align: center;">機捷運行時間表</h1>
+    <div style="text-align: center;">
+        <select id="start" class="station" >
+            <option>請選擇起始車站</option>
+        </select>
+    </div>
+    <div style="text-align: center;">
+        <select id="end" class="station">
+            <option>請選擇結束車站</option>
+        </select>
+    </div>
+    <div style="text-align: center;">
+        <select id="ticketype" >
+            <option>請選擇票型</option>
+        </select>
+    </div>
+    <div style="text-align: center;">
+        <select id="fareclass">
+            <option>請選擇費率</option>
+        </select>
+    </div>
+    <div style="text-align: center;">
+        <button id="price" >查詢票價</button>
+    </div>
+
+    <div style="text-align: center;">
+        <div id="value"></div>
+    </div>
+    <div id='A1' class='st'></div>
+    <div class="arrow down"></div>
+    <div id='T1'></div>
+    <div class="arrow down"></div>
+    <div id='A2'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T2'></div>
+    <div class="arrow down"></div>
+    <div id='A3'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T3'></div>
+    <div class="arrow down"></div>
+    <div id='A4'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T4'></div>
+    <div class="arrow down"></div>
+    <div id='A5'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T5'></div>
+    <div class="arrow down"></div>
+    <div id='A6'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T6'></div>
+    <div class="arrow down"></div>
+    <div id='A7'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T7'></div>
+    <div class="arrow down"></div>
+    <div id='A8'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T8'></div>
+    <div class="arrow down"></div>
+    <div id='A9'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T9'></div>
+    <div class="arrow down"></div>
+    <div id='A10'class='st'> </div>
+    <div class="arrow down"></div>>
+    <div id='T10'></div>
+    <div class="arrow down"></div>
+    <div id='A11'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T11'></div>
+    <div class="arrow down"></div>
+    <div id='A12'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T12'></div>
+    <div class="arrow down"></div>
+    <div id='A13'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T13'></div>
+    <div class="arrow down"></div>
+    <div id='A14'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T14'></div>
+    <div class="arrow down"></div>
+    <div id='A15'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T15'></div>
+    <div class="arrow down"></div>
+    <div id='A16'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T16'></div>
+    <div class="arrow down"></div>
+    <div id='A17'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T17'></div>
+    <div class="arrow down"></div>
+    <div id='A18'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T18'></div>
+    <div class="arrow down"></div>
+    <div id='A19'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T19'></div>
+    <div class="arrow down"></div>
+    <div id='A20'class='st'> </div>
+    <div class="arrow down"></div>
+    <div id='T20'></div>
+    <div class="arrow down"></div>
+    <div id='A21'class='st'> </div>
+</body>
+</html>
