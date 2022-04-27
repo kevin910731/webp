@@ -1,0 +1,23 @@
+<html> 
+<head> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script> 
+    var dataUrl = "https://wic.heo.taipei/OpenData/API/Rain/Get?stationNo=&loginId=open_rain&dataKey=85452C1D"; 
+    var data = $.getJSON(dataUrl); 
+    data.done( function( msg ) {     
+    $.each(msg.data, function(i,data) { 
+      console.log("00")
+    // $("#contain").html(); 
+    // $("#contain").append(data[0].stationName); 
+    }); 
+  });
+  </script> 
+</head> 
+<body> 
+  <h1>臺北市即時雨量量資料</h1> 
+  <div id="contain"></div> 
+  <h2>八⾥里里 (C0AD1)</h2> 
+  <h3>2022年年04月26號21點30分</h3> 
+  <h3>即時雨量量0</h3>
+</body> 
+</html>
