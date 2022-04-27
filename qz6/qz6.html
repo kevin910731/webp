@@ -1,8 +1,23 @@
-setInterval(myfunction,1000);
-function myfunction(){
-  var times=new Date();
-  var hour=times.getHours();
-  var min=times.getMinutes();
-  var second=times.getSeconds();
-  document.getElementById("demo").innerHTML=hour+':'+min+':'+second;
-}
+<html> 
+<head> 
+  <script type="text/javascript"> 
+    setInterval(myfunction,1000);
+    function myfunction(){
+      var times=new Date();
+      var hour=times.getHours();
+      var min=times.getMinutes();
+      var second=times.getSeconds();
+      if(second<10){
+        second='0'+second;
+      }
+      if(min<10){
+        min='0'+min;
+      }
+      document.getElementById("demo").innerHTML=hour+':'+min+':'+second;
+    }
+  </script> 
+</head> 
+<body> 
+  <h1 id='demo'></h1>
+</body> 
+</html>
