@@ -2,22 +2,45 @@
 <head> 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script> 
-    var dataUrl = "https://wic.heo.taipei/OpenData/API/Rain/Get?stationNo=&loginId=open_rain&dataKey=85452C1D"; 
+    var dataUrl = "https://cors-anywhere.herokuapp.com/https://wic.heo.taipei/OpenData/API/Rain/Get?stationNo=&loginId=open_rain&dataKey=85452C1D"; 
     var data = $.getJSON(dataUrl); 
     data.done( function( msg ) {     
-    $.each(msg.data, function(i,data) { 
-      console.log("00")
-    // $("#contain").html(); 
-    // $("#contain").append(data[0].stationName); 
-    }); 
+      console.log(msg);
+      for(var i=0;i<5;i++){
+      $("#s"+i).html(msg.data[i].stationName+"("+msg.data[i].stationNo+")");
+      var year=msg.data[i].recTime.substring(0,4);
+      var month=msg.data[i].recTime.substring(4,6);
+      var day=msg.data[i].recTime.substring(6,8);
+      var min=msg.data[i].recTime.substring(8,10);
+      var sec=msg.data[i].recTime.substring(10,12);
+      console.log(year);
+      $("#d"+i).html("更新時間："+year+"/"+month+"/"+day+" "+min+":"+sec);
+      $("#f"+i).html("目前雨量："+msg.data[i].rain); 
+      }
   });
   </script> 
 </head> 
 <body> 
-  <h1>臺北市即時雨量量資料</h1> 
-  <div id="contain"></div> 
-  <h2>八⾥里里 (C0AD1)</h2> 
-  <h3>2022年年04月26號21點30分</h3> 
-  <h3>即時雨量量0</h3>
+  <h1>臺北市即時雨量資料</h1> 
+  <div id="s0"></div>
+  <div id="d0"></div>
+  <div id="f0"></div>
+  </br>
+  <div id="s1"></div>
+  <div id="d1"></div>
+  <div id="f1"></div>
+  </br>
+  <div id="s2"></div>
+  <div id="d2"></div>
+  <div id="f2"></div>
+  </br>
+  <div id="s3"></div>
+  <div id="d3"></div>
+  <div id="f3"></div>
+  </br>
+  <div id="s4"></div>
+  <div id="d4"></div>
+  <div id="f4"></div>
+  </br>
 </body> 
 </html>
