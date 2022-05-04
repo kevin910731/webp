@@ -48,11 +48,12 @@
         });
         function createimg() {
             var str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            for (var j = 0; j < 6; j++) {
-                var random = Math.round(Math.random() * 25);
-                mystring[j] = str[random] + mystring[j];
-                $("#r" + j).prepend('<img class="prow' + j + ' "src ="img/' + str[random] + '.png" />');
-            }
+            var num = '012345'
+            var x=num[Math.round(Math.random()*5)];
+            var random = Math.round(Math.random() * 25);
+            mystring[x] = str[random] + mystring[x];
+            $("#r" + x).prepend('<img class="prow' + x + ' "src ="img/' + str[random] + '.png" />');
+            
         }
         function animate() {
             for(var i = 0; i < 6; i++) {
