@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+h1,
+p {
+  font-family:'Courier New', Courier, monospace
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #e6dbad;
+}
+
+.container {
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 20rem;
+  transform: translateX(-50%);
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 150%;
+  margin-bottom: 1.5em;
+  padding-bottom: 0.4em;
+}
+
+.fa,
+.fas {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* =======
+form
+==========*/
+
+/* text */
+.input-text {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  text-align: center;
+  width: 20rem;
+  padding-bottom: .5em;
+}
+
+.text {
+  text-indent: 10px;
+  padding: 1em;
+  background-color: #F9F9F9;
+  border: none;
+  border-radius: 30px;
+  width: 25rem;
+  outline: none;
+}
+
+.add-button {
+  right: 14%;
+  font-size: .5rem;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background-color: #F9F9F9;
+  outline: none;
+  color: #1B7E7E;
+}
+
+::placeholder {
+  color: #999DA3;
+}
+
+/* option */
+
+.input-option {
+  text-align: left;
+  padding: .5em;
+  text-align-last: left;
+}
+
+select {
+  border: 0;
+  margin: 1em;
+  padding-left: 1.3em;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+option {
+  direction: ltr;
+}
+
+/* todo-list */
+.todo {
+  position:relative; 
+  margin: auto;
+  width: 20rem;
+  display: flex;
+  width: 20rem;
+  justify-content: center; 
+  align-items: center; 
+  padding: .7em .15em;
+}
+
+.todo-list {
+  min-width: 70%;
+  list-style: none;
+}
+
+.todo-item {
+  flex: 1;
+  padding-left: 1em;
+  color: #1B7E7E;
+}
+
+ul {
+  padding: 0;
+}
+
+.trash-btn {
+  margin-right: 3.5em;
+  padding: .1em .4em;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: #f00b0b;
+}
+
+.check-btn {
+  margin-right: 3.5em;
+  justify-content: center; 
+  padding: .1em .4em;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  color: #5ae708;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.completed-checkbox {
+  color: #fff;
+}
