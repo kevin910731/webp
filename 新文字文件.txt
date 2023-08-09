@@ -1,0 +1,41 @@
+import gi
+
+gi.require_version('Gst', '1.0')
+from gi.repository import Gst, GObject
+
+# Initialize GStreamer
+Gst.init(None)
+
+# Create a pipeline
+pipeline = Gst.Pipeline()
+
+# Create elements
+src = Gst.ElementFactory.make("filesrc", "src")
+src.set_property("location", "your_audio_file.mp3")
+
+decoder = Gst.ElementFactory.make("decodebin", "decoder")
+decoder.connect("pad-added", lambda _, pad: pad.link(convert.get_static_pad("sink")))
+
+convert = Gst.ElementFactory.make("audioconvert", "convert")
+
+sink = Gst.ElementFactory.make("autoaudiosink", "sink")
+
+# Add elements to the pipeline
+pipeline.add(src)
+pipeline.add(decoder)
+pipeline.add(convert)
+pipeline.add(sink)
+
+# Link elements
+src.link(decoder)
+
+# Start the pipeline
+pipeline.set_state(Gst.State.PLAYING)
+
+# Create a main loop to handle GStreamer events
+main_loop = GObject.MainLoop()
+try:
+    main_loop.run()
+except KeyboardInterrupt:
+    pipeline.set_state(Gst.State.NULL)
+    main_loop.quit()
